@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SettingActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="설정"
+        android:layout_margin="20dp"/>
+
+    <fragment
+        android:id="@+id/fragOption"
+        android:name="com.example.project_1889043.Option"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        tools:layout="@layout/activity_setting"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="확인" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="초기화" />
+
+    <Button
+        android:id="@+id/btnSendEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="제작자에게 이메일 보내기"/>
+
+    <TextView
+        android:id="@+id/tvMaker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="제작자 : 1889043 임동주"/>
+
+</LinearLayout>

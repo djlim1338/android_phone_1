@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Start">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/etPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="비밀번호 : "/>
+
+            <EditText
+                android:id="@+id/etBg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="백그라운드 실행 : "/>
+
+            <EditText
+                android:id="@+id/etLoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="위치서비스 : "/>
+
+            <EditText
+                android:id="@+id/etCam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="카메라 : "/>
+
+            <EditText
+                android:id="@+id/etSendP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="휴대폰 : "/>
+
+            <EditText
+                android:id="@+id/etSendE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="이메일 : "/>
+
+            <EditText
+                android:id="@+id/etSendC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="전송 : "/>
+
+            <EditText
+                android:id="@+id/etSsid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ssid수집 : "/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

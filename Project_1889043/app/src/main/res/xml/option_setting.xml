@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="앱 설정">
+        <SwitchPreference
+            android:id="@+id/spPass"
+            android:defaultValue="false"
+            android:key="password"
+            android:title="비밀번호"
+            android:summaryOn="비밀번호 사용함"
+            android:summaryOff="비밀번호 사용하지 않음"/>
+
+        <EditTextPreference
+            android:id="@+id/spPassVal"
+            android:title="비밀번호"
+            android:key="passwordValue"
+            android:dependency="password"
+            android:summary="비밀번호 입력"
+            android:singleLine="true"
+            android:lines="1"/>
+
+        <SwitchPreference
+            android:id="@+id/spBg"
+            android:defaultValue="true"
+            android:key="background"
+            android:title="백그라운드 실행"
+            android:summaryOn="백그라운드 실행 사용함"
+            android:summaryOff="백그라운드 실행 사용하지 않음"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="위치정보">
+        <SwitchPreference
+            android:id="@+id/spLoc"
+            android:defaultValue="true"
+            android:key="location"
+            android:title="위치정보"
+            android:summaryOn="위치정보 사용함"
+            android:summaryOff="위치정보 사용하지 않음"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="카메라">
+        <SwitchPreference
+            android:id="@+id/spCam"
+            android:defaultValue="true"
+            android:key="camera"
+            android:title="카메라"
+            android:summaryOn="카메라 사용함"
+            android:summaryOff="카메라 사용하지 않음"/>
+
+        <CheckBoxPreference
+            android:id="@+id/spCamB"
+            android:defaultValue="true"
+            android:title="후면카메라"
+            android:key="cameraBCk"
+            android:dependency="camera"
+            android:summaryOn="후면카메라 사용함"
+            android:summaryOff="후면카메라 사용하지 않음"/>
+
+        <CheckBoxPreference
+            android:id="@+id/spCamF"
+            android:defaultValue="false"
+            android:title="전면카메라"
+            android:key="cameraFCk"
+            android:dependency="camera"
+            android:summaryOn="전면카메라 사용함"
+            android:summaryOff="전면카메라 사용하지 않음"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="전송">
+
+        <SwitchPreference
+            android:id="@+id/spPhone"
+            android:defaultValue="false"
+            android:key="sendPhone"
+            android:title="연락처 전송"
+            android:summaryOn="연락처 전송 사용함"
+            android:summaryOff="연락처 전송 사용하지 않음"/>
+
+        <EditTextPreference
+            android:id="@+id/spPhoneValue"
+            android:title="휴대폰 번호"
+            android:key="phoneValue"
+            android:dependency="sendPhone"
+            android:summary="휴대폰 번호 입력. 여러개 입력시 줄바꿈으로 구분" />
+
+        <SwitchPreference
+            android:id="@+id/spEmail"
+            android:defaultValue="false"
+            android:key="sendEmail"
+            android:title="email 전송"
+            android:summaryOn="email 전송 사용함"
+            android:summaryOff="email 전송 사용하지 않음"/>
+
+        <EditTextPreference
+            android:id="@+id/spEmailValue"
+            android:title="이메일"
+            android:key="emailValue"
+            android:dependency="sendEmail"
+            android:summary="이메일 입력. 여러개 입력시 줄바꿈으로 구분" />
+
+        <SwitchPreference
+            android:id="@+id/spSend"
+            android:defaultValue="true"
+            android:key="send"
+            android:title="주기적 송신"
+            android:summaryOn="주기적 송신 사용함"
+            android:summaryOff="주기적 송신 사용하지 않음"/>
+
+        <ListPreference
+            android:key="sendCycle"
+            android:title="송신 주기"
+            android:summary="송신 주기를 설정."
+            android:dependency="send"
+            android:entries="@array/sendCycleName"
+            android:entryValues="@array/sendCycleName"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="시스템">
+        <SwitchPreference
+            android:id="@+id/spSsid"
+            android:defaultValue="false"
+            android:key="ssid"
+            android:title="SSID 수집"
+            android:summaryOn="주변 SSID 수집 사용함"
+            android:summaryOff="주변 SSID 수집 사용하지 않음"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
